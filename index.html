@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Parallax</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		.bgi {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			height: 100%;
+			width: 100%;
+		}
+
+		.section-01 .bgi{
+			/*background-image: url('assets/images/bcg_slide-1.jpg');*/
+		}
+		.section-02 .bgi{
+			background-image: url('assets/images/bcg_slide-4.jpg');
+		}
+		.section-03 .bgi{
+			background-image: url('assets/images/bcg_slide-3.jpg');
+		}
+		.section-04 .bgi{
+			background-image: url('assets/images/bcg_slide-4.jpg');
+		}
+
+		.section-04,
+		.section-03{
+			position: relative;
+		}
+
+		.swiper-slide{
+			width: 100%;
+			background: url('assets/images/bcg_slide-4.jpg') no-repeat center center;
+			background-size: cover;
+			/*background-attachment: fixed;*/
+			border: 1px solid #f00;
+			overflow: hidden;
+
+		}
+
+
+		.btn-slide-down{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background: #f00;
+			color: #fff;
+			padding: 100px;
+		}
+
+		.btn-close-top{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 100px;
+			background: #f00;
+		}
+
+		.btn-slider-side{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 100px;
+			background: #f00;
+		}
+
+		.section-aside{
+			height: 100%;
+			width: 300px;
+			background: #fff;
+			position: absolute;
+			top: 0;
+			left: -300px;
+		}
+
+		.section-aside-inner{
+			position: relative;
+		}
+
+		.btn-close-slide{
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: #f00;
+		}
+
+	</style>
+	<link rel="stylesheet" href="assets/css/swiper.min.css" />
+</head>
+<body>
+
+	<div style="position: fixed;width: 100%;">
+		<div class="section-01">
+			<!-- <div class="bgi"></div> -->
+			<!-- Swiper -->
+			<div class="swiper-container bgi">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#none" class="btn-slide-down">click</a>
+					</div>
+					<div class="swiper-slide">slide2</div>
+					<div class="swiper-slide">slide3</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Cover dead space -->
+	<div class="bgi"></div>
+
+
+	<div class="section-03">
+		<div class="bgi">
+			<a href="#" class="btn-slider-side">click</a>
+			<div class="section-aside">
+				<div class="section-aside-inner">
+					<a href="#" class="btn-close-slide">close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-04">
+		<div class="bgi">
+			<a href="#" class="btn-close-top">click</a>
+		</div>
+	</div>
+
+	<div class="section-03">
+		<div class="bgi">
+			<a href="#" class="btn-close-top">click</a>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/swiper.min.js"></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+    });
+  </script>
+	<script>
+		var btnSlideDown = $('.btn-slide-down');
+		var btnSlideTop = $('.btn-close-top');
+
+		function adjustView(){
+			$('.bgi').height($(window).height());
+		 	// $('.section-02').css('paddingTop', $(window).height() + 'px');
+		}
+
+		function controlWindowScrollTop(posY){
+			if(posY === 0){
+				$('html,body').stop().animate({
+			        scrollTop: 0
+			    });
+			}else{
+				$('html,body').stop().animate({
+			        scrollTop: '+=' +posY+ 'px'
+			    });	
+			}
+		}
+
+		$(window).bind('load', adjustView);
+		$(window).bind('resize', adjustView);
+		
+		btnSlideDown.bind('click', function (e) {
+			e.preventDefault();
+			controlWindowScrollTop(300);
+
+		});
+
+		btnSlideTop.bind('click', function (e) {
+			e.preventDefault();
+			console.log('click');
+			controlWindowScrollTop(0);
+		});
+
+		$('.btn-slider-side').bind('click', function (e) {
+			e.preventDefault();
+			$('.section-aside').stop().animate({
+				left: '0'
+			});
+		});
+
+
+		$('.btn-close-slide').bind('click', function (e) {
+			e.preventDefault();
+			$('.section-aside').stop().animate({
+				left: '-300px'
+			});
+		});
+
+	</script>
+
+</body>
+</html>
