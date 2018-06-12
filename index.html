@@ -1,153 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple Parallax</title>
-	<style>
-		*{padding: 0; margin: 0;}
-		.bgi {
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			height: 100%;
-			width: 100%;
-		}
-
-		.section-01 .bgi{
-			/*background-image: url('assets/images/bcg_slide-1.jpg');*/
-		}
-		.section-02 .bgi{
-			background-image: url('assets/images/bcg_slide-4.jpg');
-		}
-		.section-03 .bgi{
-			background-image: url('assets/images/bcg_slide-3.jpg');
-		}
-		.section-04 .bgi{
-			background-image: url('assets/images/bcg_slide-4.jpg');
-		}
-
-		.section-04,
-		.section-03{
-			position: relative;
-		}
-
-		.swiper-slide{
-			width: 100%;
-			background: url('assets/images/bcg_slide-4.jpg') no-repeat center center;
-			background-size: cover;
-			/*background-attachment: fixed;*/
-			border: 1px solid #f00;
-			overflow: hidden;
-
-		}
-
-
-		.btn-slide-down{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			background: #f00;
-			color: #fff;
-			padding: 100px;
-		}
-
-		.btn-close-top{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			padding: 100px;
-			background: #f00;
-		}
-
-		.btn-slider-side{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			padding: 100px;
-			background: #f00;
-		}
-
-		.section-aside{
-			height: 100%;
-			width: 300px;
-			background: #fff;
-			position: absolute;
-			top: 0;
-			left: -300px;
-		}
-
-		.section-aside-inner{
-			position: relative;
-		}
-
-		.btn-close-slide{
-			position: absolute;
-			top: 0;
-			right: 0;
-			color: #f00;
-		}
-
-	</style>
+	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="assets/css/swiper.min.css" />
+	<title>Pension</title>
 </head>
 <body>
 
-	<div style="position: fixed;width: 100%;">
-		<div class="section-01">
-			<!-- <div class="bgi"></div> -->
-			<!-- Swiper -->
-			<div class="swiper-container bgi">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<a href="#none" class="btn-slide-down">click</a>
-					</div>
-					<div class="swiper-slide">slide2</div>
-					<div class="swiper-slide">slide3</div>
-				</div>
-				<!-- Add Pagination -->
-				<div class="swiper-pagination"></div>
+	<div id="hd">
+		<div class="hd-inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="./assets/images/img_logo.png" alt="" />
+				</a>
+			</h1>
+
+			<div class="hd-container">
+				<ul class="nav-wrapper clearfix">
+					<li class="nav-list">
+						<a href="#" class="nav-link">인사말</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">특별함</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">미리보기</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">예약안내</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">주변여행</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">교통안내</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">커뮤니티</a>
+					</li>
+				</ul>
 			</div>
+
+			<a href="#" class="btn-go-reserve">
+				<img src="./assets/images/txt-reserve-table.gif" alt="" />
+			</a>
 
 		</div>
 	</div>
 
 
-	<!-- Cover dead space -->
+	<div class="swiper-area">
+		<div class="swiper-container bgi">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image: url('./assets/images/ban_img_01.jpg');"></div>
+				<div class="swiper-slide" style="background-image: url('./assets/images/ban_img_01.jpg');"></div>
+				<div class="swiper-slide" style="background-image: url('./assets/images/ban_img_01.jpg');"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+
+	<!-- Covered dead space -->
 	<div class="bgi"></div>
+	<!-- // Covered dead space -->
 
 
-	<div class="section-03">
-		<div class="bgi">
-			<a href="#" class="btn-slider-side">click</a>
-			<div class="section-aside">
-				<div class="section-aside-inner">
-					<a href="#" class="btn-close-slide">close</a>
-				</div>
-			</div>
-		</div>
+	<!--<div class="specialty-area">-->
+		<!--<div class="bgi"></div>-->
+	<!--</div>-->
+
+	<!--<div class="section-03">-->
+		<!--<div class="bgi">-->
+			<!--<a href="#" class="btn-slider-side">click</a>-->
+			<!--<div class="section-aside">-->
+				<!--<div class="section-aside-inner">-->
+					<!--<a href="#" class="btn-close-slide">close</a>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+	<!--<div class="pension-feature-01">-->
+		<!--<div class="bgi"></div>-->
+	<!--</div>-->
+
+	<!--<div class="section-03" style="position: relative">-->
+		<!--<div class="bgi">-->
+			<!--<a href="#" class="btn-close-top">click2</a>-->
+		<!--</div>-->
+	<!--</div>-->
+
+
+	<div class="featured">
+		<img src="./assets/images/img_facility_special.jpg" alt="" width="100%" />
 	</div>
 
-	<div class="section-04">
-		<div class="bgi">
-			<a href="#" class="btn-close-top">click</a>
-		</div>
+	<div class="featured">
+		<img src="./assets/images/img_pension_feature1.jpg" alt="" width="100%" />
 	</div>
 
-	<div class="section-03">
-		<div class="bgi">
-			<a href="#" class="btn-close-top">click</a>
-		</div>
+	<div class="featured">
+		<img src="./assets/images/img_pension_feature2.jpg" alt="" width="100%" />
 	</div>
 
+	<div class="featured">
+		<img src="./assets/images/img_pension_feature3.jpg" alt="" width="100%" />
+	</div>
+
+	<footer>
+		<div class="center">
+			<img src="./assets/images/img_logo_ft.gif" alt="">
+		</div>
+
+		<div class="center" style="margin: 20px 0;">
+			<a href="#" target="_blank">
+				<img src="./assets/images/btn-table-dining.gif" alt="조석표" />
+			</a>
+			&nbsp;&nbsp;
+			<a href="#" target="_blank">
+				<img src="./assets/images/btn-realtime-reserve.gif" alt="실시간 예약" />
+			</a>
+		</div>
+
+		<div class="contact">
+			032)886-5751 / 010-6328-3545&nbsp;&nbsp;&nbsp;&nbsp;
+			[농협:박정자]351-0423-6336-83
+		</div>
+
+		<div class="address">
+			ㆍ펜션주소: 경기도 안산시 단원구 잘푸리길 97-1ㆍ지번: 경기도 안산시 단원구 대부남동 1109-8<br />
+			ㆍ사이트명: 은하수펜션 ㆍ상호: 은하수펜션 ㆍ대표자:박정자 ㆍ사업자번호: :134-30-39033 ㆍ통신판매:2016-경기안산-0375 <br />
+		</div>
+		<div class="copyright">COPYRIGHT@2018 은하수펜션. ALL RIGHT RESERVED. DESIGN BY <a href="#" target="_blank">a3design.kr</a></div>
+	</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/js/swiper.min.js"></script>
 	<script>
     var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-      },
+    	loop: true,
+		pagination: {
+			el: '.swiper-pagination'
+		},
+	    navigation: {
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
+	    },
     });
   </script>
 	<script>

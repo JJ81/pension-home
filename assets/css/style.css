@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+ul,ol,li{
+  list-style: none;
+}
+
+body{
+  font-family: "Nanum Gothic", Arial;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+#hd{
+  position: fixed;
+  width: 100%;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: rgba(135, 147, 163, 0.72);
+  z-index: 99999;
+}
+
+.hd-inner{
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.hd-container{
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.nav-list{
+  float: left;
+  width: 120px;
+  text-align: center;
+}
+
+.nav-link{
+  font-size: 16px;
+  display: block;
+  color: #fff;
+  height: 54px;
+  line-height: 54px;
+}
+
+.nav-link:hover,
+.nav-link-active{
+  background: #b3e8fd;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.nav-wrapper{
+  /*padding-top: 17px;*/
+}
+
+.btn-go-reserve{
+  height: 54px;
+  width: 163px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #4cb0c5;
+}
+
+
+
+.swiper-area{
+  position: fixed;
+  width: 100%;
+}
+
+.swiper-area .swiper-button-prev{
+  background: url('../images/btn-slider-left.png') no-repeat center center;
+  width: 55px;
+  height: 109px;
+  left: 40px;
+}
+
+.swiper-area .swiper-button-next{
+  background: url('../images/btn-slider-right.png') no-repeat center center;
+  width: 55px;
+  height: 109px;
+  right: 40px;
+}
+
+.swiper-area .swiper-pagination{
+  bottom: 218px !important;
+}
+
+/* 33-2 33-6*/
+
+.swiper-area .swiper-pagination .swiper-pagination-bullet{
+  width: 33px;
+  height: 2px;
+  background: #fff;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.swiper-area .swiper-pagination .swiper-pagination-bullet-active{
+  width: 33px;
+  height: 6px;
+  background: #4486c4;
+  position: relative;
+  top : 2px;
+}
+
+.bgi {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/*.bgi2 {*/
+  /*background-position: center center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
+  /*background-size: cover;*/
+  /*height: 400px;*/
+  /*width: 100%;*/
+/*}*/
+
+
+img{
+  vertical-align: middle;
+}
+
+.specialty-area, .pension-feature-01{
+  position: relative;
+}
+
+.specialty-area .bgi{
+  background-image: url('../images/img_facility_special.jpg');
+  background-size: contain;
+}
+
+.pension-feature-01 .bgi{
+  background-image: url('../images/img_facility_special.jpg');
+  background-size: cover;
+}
+
+.section-04 .bgi{
+  background-image: url('../images/bcg_slide-4.jpg');
+}
+
+.section-04{
+  position: relative;
+}
+
+.swiper-slide{
+  width: 100%;
+  background: url('../images/bcg_slide-4.jpg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.featured{
+  position: relative;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.btn-slide-down{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #f00;
+  color: #fff;
+  padding: 100px;
+}
+
+.btn-close-top{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 100px;
+  background: #f00;
+}
+
+.btn-slider-side{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 100px;
+  background: #f00;
+}
+
+.section-aside{
+  height: 100%;
+  width: 300px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: -300px;
+}
+
+.section-aside-inner{
+  position: relative;
+}
+
+.btn-close-slide{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #f00;
+}
+
+.center{
+  text-align: center;
+}
+
+
+footer{
+  position: relative;
+  background: #000;
+  height: 275px;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+
+.address{
+  font-size: 12px;
+  color: #e1e1e1;
+  width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contact{
+  font-size: 22px;
+  width: 800px;
+  margin: 15px auto 15px auto;
+  text-align: center;
+  color: #e1e1e1;
+}
+
+.copyright{
+  font-size: 12px;
+  color: #e1e1e1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.copyright a{
+  color: #bae9f1;
+}
