@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/swiper.min.css" />
+	<title>Pension</title>
+</head>
+<body>
+
+	<div id="hd">
+		<div class="hd-inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="./assets/images/img_logo.png" alt="" />
+				</a>
+			</h1>
+
+			<div class="hd-container">
+				<ul class="nav-wrapper clearfix">
+					<li class="nav-list">
+						<a href="#" class="nav-link">인사말</a>
+						<ul class="nav-sub-wrp">
+							<li class="nav-sub-list">
+								<a href="#1" class="nav-sub-link">하늘나리</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#2" class="nav-sub-link">해당화</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#3" class="nav-sub-link">민들레</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#4" class="nav-sub-link">해바라기</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#4" class="nav-sub-link">진달래</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">특별함</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">미리보기</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">예약안내</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">주변여행</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">교통안내</a>
+					</li>
+					<li class="nav-list">
+						<a href="#" class="nav-link">커뮤니티</a>
+					</li>
+				</ul>
+			</div>
+
+			<a href="#" class="btn-go-reserve">
+				<img src="./assets/images/txt-reserve-table.gif" alt="" />
+			</a>
+
+		</div>
+	</div>
+
+	<div class="swiper-area">
+		<div class="swiper-container bgi">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image: url('./assets/images/ban_img_01.jpg');"></div>
+				<div class="swiper-slide" style="background-image: url('./assets/images/ban_img_01.jpg');"></div>
+				<div class="swiper-slide" style="background-image: url('./assets/images/ban_img_01.jpg');"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="center indicator">
+				<a href="#" class="btn-go-bottom"><img src="./assets/images/img_indicator_bottom.png" alt="" /></a>
+			</div>
+			<div class="img-main-subject2">
+				<img src="./assets/images/img_subject_pension2.png" alt="" /><br /><br /><br />
+				<a href="#" class="btn-go-info">
+					<img src="./assets/images/btn-view-room-info.gif" alt="" />
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Covered dead space -->
+	<div class="bgi"></div>
+	<!-- // Covered dead space -->
+
+	<div class="featured">
+		<img src="./assets/images/img_room_info_01_1.jpg" alt="" width="100%" />
+		<div class="center btn-reserve-area">
+			<a href="#none">
+				<img src="./assets/images/btn-realtime-reserve2.gif" alt="">
+			</a>
+		</div>
+	</div>
+
+	<footer>
+		<div class="center">
+			<img src="./assets/images/img_logo_ft.gif" alt="">
+		</div>
+
+		<div class="center" style="margin: 20px 0;">
+			<a href="#" target="_blank">
+				<img src="./assets/images/btn-table-dining.gif" alt="조석표" />
+			</a>
+			&nbsp;&nbsp;
+			<a href="#" target="_blank">
+				<img src="./assets/images/btn-realtime-reserve.gif" alt="실시간 예약" />
+			</a>
+		</div>
+
+		<div class="contact">
+			032)886-5751 / 010-6328-3545&nbsp;&nbsp;&nbsp;&nbsp;
+			[농협:박정자]351-0423-6336-83
+		</div>
+
+		<div class="address">
+			ㆍ펜션주소: 경기도 안산시 단원구 잘푸리길 97-1ㆍ지번: 경기도 안산시 단원구 대부남동 1109-8<br />
+			ㆍ사이트명: 은하수펜션 ㆍ상호: 은하수펜션 ㆍ대표자:박정자 ㆍ사업자번호: :134-30-39033 ㆍ통신판매:2016-경기안산-0375 <br />
+		</div>
+		<div class="copyright">COPYRIGHT@2018 은하수펜션. ALL RIGHT RESERVED. DESIGN BY <a href="#" target="_blank">a3design.kr</a></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/swiper.min.js"></script>
+	<script>
+		new Swiper('.swiper-container', {
+			loop: true,
+		  	autoplay: false,
+			pagination: {
+				el: '.swiper-pagination'
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		var btnSlideDown = $('.btn-slide-down');
+		var btnSlideTop = $('.btn-close-top');
+
+		function adjustView(){
+			$('.bgi').height($(window).height());
+		}
+
+		function controlWindowScrollTop(posY, duration){
+			var duration = duration || 300;
+			if(posY === 0){
+				$('html,body').stop().animate({
+			        scrollTop: 0
+			    }, duration);
+			}else{
+				$('html,body').stop().animate({
+			        scrollTop: '+=' +posY+ 'px'
+			    }, duration);
+			}
+		}
+
+		$(window).bind('load', adjustView);
+		$(window).bind('resize', adjustView);
+		
+		btnSlideDown.bind('click', function (e) {
+			e.preventDefault();
+			controlWindowScrollTop(300);
+
+		});
+
+		btnSlideTop.bind('click', function (e) {
+			e.preventDefault();
+			console.log('click');
+			controlWindowScrollTop(0);
+		});
+
+		$('.btn-slider-side').bind('click', function (e) {
+			e.preventDefault();
+			$('.section-aside').stop().animate({
+				left: '0'
+			});
+		});
+
+
+		$('.btn-close-slide').bind('click', function (e) {
+			e.preventDefault();
+			$('.section-aside').stop().animate({
+				left: '-300px'
+			});
+		});
+
+		$(window).bind('load', function () {
+			$('.img-main-subject').stop().animate({
+			  'opacity' : 1,
+			  'marginTop' : '-300px'
+			}, 1000);
+
+			$('.img-main-subject2').stop().animate({
+				'opacity' : 1,
+				'marginTop' : '-200px'
+			}, 1000);
+		});
+
+		$('.btn-go-bottom,.btn-go-info').bind('click', function (e) {
+			e.preventDefault();
+			controlWindowScrollTop($('.featured').eq(0).offset().top);
+		});
+
+	</script>
+
+</body>
+</html>

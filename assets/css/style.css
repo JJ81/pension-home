@@ -292,6 +292,16 @@ footer{
   opacity: 0;
 }
 
+.img-main-subject2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -550px;
+  margin-top: -300px;
+  z-index: 100;
+  opacity: 0;
+}
+
 .nav-sub-wrp{
   width: 100%;
   background: #516073;
@@ -320,4 +330,13 @@ footer{
 
 .nav-list:hover .nav-sub-wrp{
   display: block;
+}
+
+.btn-reserve-area{
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  background: #fff;
+  padding-bottom: 120px;
 }
