@@ -19,6 +19,23 @@
 				<ul class="nav-wrapper clearfix">
 					<li class="nav-list">
 						<a href="#" class="nav-link">인사말</a>
+						<ul class="nav-sub-wrp">
+							<li class="nav-sub-list">
+								<a href="#1" class="nav-sub-link">하늘나리</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#2" class="nav-sub-link">해당화</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#3" class="nav-sub-link">민들레</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#4" class="nav-sub-link">해바라기</a>
+							</li>
+							<li class="nav-sub-list">
+								<a href="#4" class="nav-sub-link">진달래</a>
+							</li>
+						</ul>
 					</li>
 					<li class="nav-list">
 						<a href="#" class="nav-link">특별함</a>
@@ -48,7 +65,6 @@
 		</div>
 	</div>
 
-
 	<div class="swiper-area">
 		<div class="swiper-container bgi">
 			<div class="swiper-wrapper">
@@ -59,38 +75,18 @@
 			<div class="swiper-pagination"></div>
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
+			<div class="center indicator">
+				<a href="#" class="btn-go-bottom"><img src="./assets/images/img_indicator_bottom.png" alt="" /></a>
+			</div>
+			<div class="img-main-subject">
+				<img src="./assets/images/img_subject_pension.png" alt="" />
+			</div>
 		</div>
 	</div>
 
 	<!-- Covered dead space -->
 	<div class="bgi"></div>
 	<!-- // Covered dead space -->
-
-
-	<!--<div class="specialty-area">-->
-		<!--<div class="bgi"></div>-->
-	<!--</div>-->
-
-	<!--<div class="section-03">-->
-		<!--<div class="bgi">-->
-			<!--<a href="#" class="btn-slider-side">click</a>-->
-			<!--<div class="section-aside">-->
-				<!--<div class="section-aside-inner">-->
-					<!--<a href="#" class="btn-close-slide">close</a>-->
-				<!--</div>-->
-			<!--</div>-->
-		<!--</div>-->
-	<!--</div>-->
-
-	<!--<div class="pension-feature-01">-->
-		<!--<div class="bgi"></div>-->
-	<!--</div>-->
-
-	<!--<div class="section-03" style="position: relative">-->
-		<!--<div class="bgi">-->
-			<!--<a href="#" class="btn-close-top">click2</a>-->
-		<!--</div>-->
-	<!--</div>-->
 
 
 	<div class="featured">
@@ -139,35 +135,35 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/js/swiper.min.js"></script>
 	<script>
-    var swiper = new Swiper('.swiper-container', {
-    	loop: true,
-		pagination: {
-			el: '.swiper-pagination'
-		},
-	    navigation: {
-		    nextEl: '.swiper-button-next',
-		    prevEl: '.swiper-button-prev',
-	    },
-    });
-  </script>
-	<script>
+		new Swiper('.swiper-container', {
+			loop: true,
+		  	autoplay: false,
+			pagination: {
+				el: '.swiper-pagination'
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
 		var btnSlideDown = $('.btn-slide-down');
 		var btnSlideTop = $('.btn-close-top');
 
 		function adjustView(){
 			$('.bgi').height($(window).height());
-		 	// $('.section-02').css('paddingTop', $(window).height() + 'px');
 		}
 
-		function controlWindowScrollTop(posY){
+		function controlWindowScrollTop(posY, duration){
+			var duration = duration || 300;
 			if(posY === 0){
 				$('html,body').stop().animate({
 			        scrollTop: 0
-			    });
+			    }, duration);
 			}else{
 				$('html,body').stop().animate({
 			        scrollTop: '+=' +posY+ 'px'
-			    });	
+			    }, duration);
 			}
 		}
 
@@ -199,6 +195,17 @@
 			$('.section-aside').stop().animate({
 				left: '-300px'
 			});
+		});
+
+		$(window).bind('load', function () {
+			$('.img-main-subject').stop().animate({
+			  'opacity' : 1,
+			  'marginTop' : '-300px'
+			}, 1000);
+		});
+
+		$('.btn-go-bottom').bind('click', function () {
+			controlWindowScrollTop($('.featured').eq(0).offset().top);
 		});
 
 	</script>
